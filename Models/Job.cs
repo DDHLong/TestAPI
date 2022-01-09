@@ -10,11 +10,11 @@ namespace TestAPI.Models
     {
         public int Id { get; set; }
 
-        public Discpline Discpline { get; set; }
+        public int DiscplineTd { get; set; }
 
-        public Speciality SpecialityRequired { get; set; }
+        public int SpecialityRequiredId { get; set; }
 
-        public JobType JobType { get; set; }
+        public int JobTypeId { get; set; }
 
         [Range(1000,10000)]
         public long PayAmount { get; set; }

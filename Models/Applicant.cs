@@ -10,8 +10,8 @@ namespace TestAPI.Models
     {
         public int Id { get; set; }
 
-        public Candidate CandidateId { get; set; }
+        public int CandidateId { get; set; }
 
-        public Job JobId { get; set; }
+        public int JobId { get; set; }
     }
 }

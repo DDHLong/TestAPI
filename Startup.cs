@@ -31,6 +31,10 @@ namespace TestAPI
         {
             services.AddScoped<ICandidateRepository, CandidateRepository>();
             services.AddScoped<IDiscplineRepository, DiscplineRepository>();
+            services.AddScoped<ISpecialityRepository, SpecialityRepository>();
+            services.AddScoped<IJobTypeRepository, JobTypeRepository>();
+            services.AddScoped<IJobRepository, JobRepository>();
+            services.AddScoped<IApplicantRepository, ApplicantRepository>();
             services.AddDbContext<TestContext>(o => o.UseSqlite("Data source=test.db"));
             services.AddControllers();
             services.AddSwaggerGen(c =>

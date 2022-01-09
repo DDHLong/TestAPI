@@ -31,14 +31,14 @@ namespace TestAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Discpline>> PostBooks([FromBody] Discpline discpline)
+        public async Task<ActionResult<Discpline>> PostDiscplines([FromBody] Discpline discpline)
         {
             var newDiscpline = await _discplineRepository.Create(discpline);
             return CreatedAtAction(nameof(GetDiscplines), new { id = newDiscpline.DiscplineId }, newDiscpline);
         }
 
         [HttpPut]
-        public async Task<ActionResult> PutBooks(int id, [FromBody] Discpline discpline)
+        public async Task<ActionResult> PutDiscplines(int id, [FromBody] Discpline discpline)
         {
             if (id != discpline.DiscplineId)
             {

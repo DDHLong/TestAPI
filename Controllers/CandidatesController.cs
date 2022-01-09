@@ -31,14 +31,14 @@ namespace TestAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Candidate>> PostBooks([FromBody] Candidate candidate)
+        public async Task<ActionResult<Candidate>> PostCandidates([FromBody] Candidate candidate)
         {
             var newCandidate = await _candidateRepository.Create(candidate);
             return CreatedAtAction(nameof(GetCandidates), new { id = newCandidate.Id }, newCandidate);
         }
 
         [HttpPut]
-        public async Task<ActionResult> PutBooks(int id, [FromBody] Candidate candidate)
+        public async Task<ActionResult> PutCandidates(int id, [FromBody] Candidate candidate)
         {
             if (id != candidate.Id)
             {
