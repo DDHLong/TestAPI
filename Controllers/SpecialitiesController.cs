@@ -19,28 +19,28 @@ namespace TestAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<Speciality>> GetSpecialities()
+        public async Task<IEnumerable<Specialty>> GetSpecialities()
         {
             return await _specialityRepository.Get();
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Speciality>> GetSpecialities(int id)
+        public async Task<ActionResult<Specialty>> GetSpecialities(int id)
         {
             return await _specialityRepository.Get(id);
         }
 
         [HttpPost]
-        public async Task<ActionResult<Speciality>> PostSpecialities([FromBody] Speciality speciality)
+        public async Task<ActionResult<Specialty>> PostSpecialities([FromBody] Specialty speciality)
         {
             var newSpeciality = await _specialityRepository.Create(speciality);
-            return CreatedAtAction(nameof(GetSpecialities), new { id = newSpeciality.SpecialityId }, newSpeciality);
+            return CreatedAtAction(nameof(GetSpecialities), new { id = newSpeciality.SpecialtyId }, newSpeciality);
         }
 
         [HttpPut]
-        public async Task<ActionResult> PutSpecialities(int id, [FromBody] Speciality speciality)
+        public async Task<ActionResult> PutSpecialities(int id, [FromBody] Specialty speciality)
         {
-            if (id != speciality.SpecialityId)
+            if (id != speciality.SpecialtyId)
             {
                 return BadRequest();
             }
@@ -57,7 +57,7 @@ namespace TestAPI.Controllers
             if (specialityToDelete == null)
                 return NotFound();
 
-            await _specialityRepository.Delete(specialityToDelete.SpecialityId);
+            await _specialityRepository.Delete(specialityToDelete.SpecialtyId);
             return NoContent();
         }
     }

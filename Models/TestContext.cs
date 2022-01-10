@@ -16,6 +16,10 @@ namespace TestAPI.Models
         public DbSet<Discpline> Discplines { get; set; }
         public DbSet<Job> Jobs { get; set; }
         public DbSet<JobType> JobTypes { get; set; }
-        public DbSet<Speciality> Specialities { get; set; }
+        public DbSet<Specialty> Specialities { get; set; }
+        public DbSet<CandidateSpecialty> CandidateSpecialties { get; set; }
+        public DbSet<CandidateJobType> CandidateJobTypes { get; set; }
+        public DbSet<JobJobType> JobJobTypes { get; set; }
+
     }
 }

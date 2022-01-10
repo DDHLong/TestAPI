@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace TestAPI.Models
 {
-    public class Speciality
+    public class JobJobType
     {
-        public int SpecialityId { get; set; }
+        public int Id { get; set; }
 
-        public string SpecialityName { get; set; }
+        public int JobId { get; set; }
+
+        public int JobTypeId { get; set; }
     }
 }

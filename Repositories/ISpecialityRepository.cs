@@ -7,10 +7,10 @@ namespace TestAPI.Repositories
 {
     public interface ISpecialityRepository
     {
-        Task<IEnumerable<Speciality>> Get();
-        Task<Speciality> Get(int id);
-        Task<Speciality> Create(Speciality speciality);
-        Task Update(Speciality speciality);
+        Task<IEnumerable<Specialty>> Get();
+        Task<Specialty> Get(int id);
+        Task<Specialty> Create(Specialty speciality);
+        Task Update(Specialty speciality);
         Task Delete(int id);
     }
 }

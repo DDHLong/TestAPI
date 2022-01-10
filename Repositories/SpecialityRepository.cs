@@ -15,7 +15,7 @@ namespace TestAPI.Repositories
             _context = context;
         }
 
-        public async Task<Speciality> Create(Speciality speciality)
+        public async Task<Specialty> Create(Specialty speciality)
         {
             _context.Specialities.Add(speciality);
             await _context.SaveChangesAsync();
@@ -31,17 +31,17 @@ namespace TestAPI.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<Speciality>> Get()
+        public async Task<IEnumerable<Specialty>> Get()
         {
             return await _context.Specialities.ToListAsync();
         }
 
-        public async Task<Speciality> Get(int id)
+        public async Task<Specialty> Get(int id)
         {
             return await _context.Specialities.FindAsync(id);
         }
 
-        public async Task Update(Speciality speciality)
+        public async Task Update(Specialty speciality)
         {
             _context.Entry(speciality).State = EntityState.Modified;
             await _context.SaveChangesAsync();
